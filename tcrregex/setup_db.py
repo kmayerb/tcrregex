@@ -33,7 +33,7 @@ def install_nextgen_data_to_db_ab(download_file = "new_nextgen_chains_mouse_A.ts
     # Where the file is to be installed
     path_file = os.path.realpath(__file__)
     path = os.path.dirname(path_file)
-    install_path = os.path.join(path, "db", "alphabeta_db.tsv_files", download_file) #<----- ALPHA BETA destination
+    install_path = os.path.join(path, "db", "alphabeta_db_tsv_files", download_file) #<----- ALPHA BETA destination
 
     def generate_curl(filename, download_link):
         return('curl -o {} {} -L'.format(filename, download_link))
@@ -76,7 +76,7 @@ def install_nextgen_data_to_db_gd(download_file = "new_nextgen_chains_mouse_A.ts
     # Where the file is to be installed
     path_file = os.path.realpath(__file__)
     path = os.path.dirname(path_file)
-    install_path = os.path.join(path, "db", "gammadelta_db.tsv_files", download_file) #<----- GAMMA DELTA destination
+    install_path = os.path.join(path, "db", "gammadelta_db_tsv_files", download_file) #<----- GAMMA DELTA destination
 
     def generate_curl(filename, download_link):
         return('curl -o {} {} -L'.format(filename, download_link))
