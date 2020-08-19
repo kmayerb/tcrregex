@@ -125,6 +125,8 @@ with open('beta_motifs.html' , 'w') as outfile:
 
 Example Output Files:
 
-['beta_motifs.html'](beta_motifs.html)
+<img src="./single_alpha_motif.svg">
 
-['alpha_motifs.html'](alpha_motifs.html)
+<img src="./single_beta_motif.svg">
+
+
