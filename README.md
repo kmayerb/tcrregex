@@ -1,11 +1,13 @@
 # tcrregex
 
+[15-Table1-1.png](15-Table1-1.png)
+
 ## Install 
 
-"""
+```
 pip install git+https://github.com/kmayerb/tcrregex.git
-"""
-
+```
+``
 ## Download Data Files
 
 After install, download key background files. THIS IS NOT OPTIONAL.
@@ -23,7 +25,7 @@ Suppose you've done some flashywork with [tcrdist3](https://tcrdist3.readthedocs
 
 First, with tcrdist3: 
 
-"""python
+```python
 import pandas as pd
 from tcrdist.repertoire import TCRrep
 
@@ -32,12 +34,12 @@ tr = TCRrep(cell_df = df,
             organism = 'mouse', 
             chains = ['alpha','beta'], 
             db_file = 'alphabeta_gammadelta_db.tsv')
-"""
+```
 
 Now,  boot up the tcrregex package
 
 
-"""python
+```python
 from tcrregex.subset import TCRsubset
 from tcrregex.cdr3_motif import TCRMotif
 from tcrregex.storage import StoreIOMotif, StoreIOEntropy
@@ -114,7 +116,7 @@ with open('beta_motifs.html' , 'w') as outfile:
   for motif in motif_list_b:
     svg = plotting.plot_pwm(StoreIOMotif_instance, create_file = False, my_height = 200, my_width = 600)
     outfile.write(f"<div>{svg}</div>")
-"""
+```
 
 Open your files:
 
