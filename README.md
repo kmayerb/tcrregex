@@ -1,5 +1,8 @@
 # tcrregex
 
+Suppose you've done some flashywork with [tcrdist3](https://tcrdist3.readthedocs.io/en/latest/#), our research group's open-source Python package that enables a broad array of flexible T cell receptor sequence analyses; however, you are old-school and you want regex motif patterns and the classic motif plots as they were developed in the original [TCRdist 2017 scripts suite](https://github.com/phbradley/tcr-dist) associated with the Dash et al. Nature (2017) [doi:10.1038/nature22383](https://www.semanticscholar.org/paper/Quantifiable-predictive-features-define-T-cell-Dash-Fiore-Gartland/b3e8d6f21fbdcd58888af31e791b5a8d24a1c592/figure/2) manuscript. 
+
+
 <img src="15-Table1-1.png" width="400" height="400">
 
 ## Install 
@@ -20,9 +23,6 @@ python -c "import tcrregex as td; td.setup_blast.install_blast_to_externals(down
 ```
 
 ## Usage
-
-Suppose you've done some flashywork with [tcrdist3](https://tcrdist3.readthedocs.io/en/latest/#), our research group's open-source Python package that enables a broad array of flexible T cell receptor sequence analyses; however, you are old-school and you want regex motif patterns and the classic motif plots as they were developed in the original [TCRdist 2017 scripts suite](https://github.com/phbradley/tcr-dist) associated with the Dash et al. Nature (2017) [doi:10.1038/nature22383](https://www.semanticscholar.org/paper/Quantifiable-predictive-features-define-T-cell-Dash-Fiore-Gartland/b3e8d6f21fbdcd58888af31e791b5a8d24a1c592/figure/2).
-
 
 First, with tcrdist3: 
 
