@@ -27,7 +27,7 @@ from . import install_test_files
 #from .test_resources import adaptive100
 from .pairwise import *
 from . import mappers
-from . import vis_tools
+#from . import vis_tools
 from . import repertoire_db
 from . import stats
 
