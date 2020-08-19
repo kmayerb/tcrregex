@@ -83,10 +83,10 @@ ts = TCRsubset(clone_df_subset,
             dist_b = dist_b_subset)
 
 # Chilax this step can take forever! 
-ts.find_motif()
+#ts.find_motif()
 
 # So make sure to save your motifs DataFrame 
-ts.motif_df.to_csv("saved_motifs.csv", index = False)
+#ts.motif_df.to_csv("saved_motifs.csv", index = False)
 
 # You can always reload these and skip the wait
 ts.motif_df = pd.read_csv("saved_motifs.csv")
@@ -100,9 +100,11 @@ for i,row in ts.motif_df[ts.motif_df.ab == "A"].iterrows():
     motif_logos_a.append(plotting.plot_pwm(StoreIOMotif_instance, create_file = False, my_height = 200, my_width = 600))
 
 with open('alpha_motifs.html' , 'w') as outfile:
+  outfile.write('<html>\n')
   for motif in motif_list_a:
-    svg = plotting.plot_pwm(StoreIOMotif_instance, create_file = False, my_height = 200, my_width = 600)
+    svg = plotting.plot_pwm(motif, create_file = False, my_height = 200, my_width = 600)
     outfile.write(f"<div>{svg}</div>")
+  outfile.write('</html>\n')
 
 # Output beta-chain motifs
 motif_list_b = list()
@@ -113,12 +115,14 @@ for i,row in ts.motif_df[ts.motif_df.ab == "B"].iterrows():
     motif_logos_b.append(plotting.plot_pwm(StoreIOMotif_instance, create_file = False, my_height = 200, my_width = 600))
 
 with open('beta_motifs.html' , 'w') as outfile:
+  outfile.write('<html>\n')
   for motif in motif_list_b:
-    svg = plotting.plot_pwm(StoreIOMotif_instance, create_file = False, my_height = 200, my_width = 600)
+    svg = plotting.plot_pwm(motif, create_file = False, my_height = 200, my_width = 600)
     outfile.write(f"<div>{svg}</div>")
+  outfile.write('</html>\n')
 ```
 
-Open your files:
+Example Output Files:
 
 ['beta_motifs.html'](beta_motifs.html)
 
