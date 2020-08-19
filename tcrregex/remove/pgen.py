@@ -3,7 +3,7 @@ import numpy as np
 import os.path as op
 import os
 
-from tcrregex import olga
+#from tcrregex import olga
 import tcrregex.olga.load_model as load_model
 import tcrregex.olga.generation_probability as generation_probability
 import tcrregex.olga.generation_probability as pgen
