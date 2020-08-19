@@ -19,8 +19,8 @@ opts = dict(name='tcrregex',
             author_email='kmayerbl@fredhutch.org',
             version='0.0.1',
             packages=PACKAGES,
-            include_package_data=True,
-            package_data={"": ["*.csv","*.tsv","*.txt","*.fasta"]})
+            include_package_data=True)
+            #package_data={"": ["*.csv","*.tsv","*.txt","*.fasta"]})
 
 install_reqs = [
       'pandas>=0.24.2',
