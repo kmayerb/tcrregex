@@ -34,7 +34,7 @@ def path_to_current_db_files(db_file=db_file):
     assert op.exists(db_file)
 
     db_files_dir = db_file + '_files'
-    db_files_dir = db_files_dir.replace(".", "_")
+    db_files_dir = db_files_dir.replace("db.tsv", "db_tsv")
     if not op.exists(db_files_dir):
         os.mkdir(db_files_dir)
     return db_files_dir
