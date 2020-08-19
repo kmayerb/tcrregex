@@ -20,7 +20,7 @@ opts = dict(name='tcrregex',
             version='0.0.1',
             packages=PACKAGES,
             #include_package_data=True
-            package_data={"": ["*.csv","*.tsv","*.txt","*.fasta"]})
+            package_data={"": ["*.csv","*.tsv","*.txt","*.fasta", ".tsv_files",".log.subjectX_gdna_data_TCRB_probs.txt"]})
 
 install_reqs = [
       'pandas>=0.24.2',
