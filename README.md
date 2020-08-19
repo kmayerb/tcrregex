@@ -120,8 +120,6 @@ with open('beta_motifs.html' , 'w') as outfile:
 
 Open your files:
 
-
-
 ['beta_motifs.html'](beta_motifs.html)
 
 ['alpha_motifs.html'](alpha_motifs.html)
