@@ -43,6 +43,7 @@ Now,  boot up the tcrregex package
 
 
 ```python
+from tcrregex.mappers import populate_legacy_fields
 from tcrregex.subset import TCRsubset
 from tcrregex.cdr3_motif import TCRMotif
 from tcrregex.storage import StoreIOMotif, StoreIOEntropy
@@ -57,21 +58,20 @@ clone_df_subset = tr.clone_df[ind].reset_index(drop = True).copy()
 # subset the alpha chain and beta chain distance matrices using the `clone_df_subset.clone_id` index
 dist_a_subset = pd.DataFrame(tr.pw_alpha[ind,:][:,ind])
 dist_b_subset = pd.DataFrame(tr.pw_beta[ind,:][:,ind])
+
+# Check dimensions and shapes of inputs 
 assert dist_a_subset.shape[0] == clone_df_subset.shape[0]
 assert dist_a_subset.shape[1] == clone_df_subset.shape[0]
 assert dist_b_subset.shape[0] == clone_df_subset.shape[0]
 assert dist_b_subset.shape[1] == clone_df_subset.shape[0]
-
-from tcrregex.subset import TCRsubset
-from tcrregex.mappers import populate_legacy_fields
 assert isinstance(dist_a_subset, pd.DataFrame)
 assert isinstance(dist_b_subset, pd.DataFrame)
 assert isinstance(clone_df_subset, pd.DataFrame)
 
-# use the populate_legacy_fields function to add some columns needed for compatability with tcrdist1
+# Use the populate_legacy_fields function to add some columns needed for compatability with tcrdist1
 clone_df_subset = populate_legacy_fields(df = clone_df_subset, chains =['alpha', 'beta'])
 
-# FOR DEMO ONLY: Limit the sarch to first 100 seqs
+# FOR DEMO ONLY: Limit the sarch to first 50 seqs
 clone_df_subset = clone_df_subset.iloc[0:50, :].copy()
 dist_b_subset = dist_b_subset.iloc[0:50, 0:50].copy()
 dist_a_subset = dist_a_subset.iloc[0:50, 0:50].copy()
@@ -86,10 +86,10 @@ ts = TCRsubset(clone_df_subset,
             dist_b = dist_b_subset)
 
 # Chilax this step can take forever! 
-#ts.find_motif()
+ts.find_motif()
 
 # So make sure to save your motifs DataFrame 
-#ts.motif_df.to_csv("saved_motifs.csv", index = False)
+ts.motif_df.to_csv("saved_motifs.csv", index = False)
 
 # You can always reload these and skip the wait
 ts.motif_df = pd.read_csv("saved_motifs.csv")
