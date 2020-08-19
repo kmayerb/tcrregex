@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y procps && apt-get install -y nano && ap
 RUN pip install git+https://github.com/kmayerb/tcrregex.git@0.1.0
 
 RUN pip install pytest
+RUN pip install sklearn
 RUN pip install ipython
 
 RUN python -c "import tcrregex as td; td.install_test_files.install_test_files()"
