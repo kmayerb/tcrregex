@@ -188,8 +188,8 @@ def test_non_default_manual_generation_of_ng_tcrsAB():
             dist_a = da,
             dist_b = db,
             default_mode = False)
-    ts.ng_tcrs['B'] = ts.generate_background_set(chain = ['B'],ng_log_path = 'tcrregex/db/alphabeta_db.tsv_files',ng_log_file = 'new_nextgen_chains_mouse_B.tsv')
-    ts.ng_tcrs['A'] = ts.generate_background_set(chain = ['A'],ng_log_path = 'tcrregex/db/alphabeta_db.tsv_files',ng_log_file = 'new_nextgen_chains_mouse_A.tsv')    
+    ts.ng_tcrs['B'] = ts.generate_background_set(chain = ['B'],ng_log_path = 'tcrregex/db/alphabeta_db_tsv_files',ng_log_file = 'new_nextgen_chains_mouse_B.tsv')
+    ts.ng_tcrs['A'] = ts.generate_background_set(chain = ['A'],ng_log_path = 'tcrregex/db/alphabeta_db_tsv_files',ng_log_file = 'new_nextgen_chains_mouse_A.tsv')    
     
     motif_df = ts.find_motif()
     assert isinstance(motif_df, pd.DataFrame)
