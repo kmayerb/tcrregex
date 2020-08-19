@@ -21,7 +21,6 @@ After install, download key background files. THIS IS NOT OPTIONAL.
 ```
 python -c "import tcrregex as td; td.install_test_files.install_test_files()"
 python -c "import tcrregex as td; td.setup_db.install_all_next_gen()"
-python -c "import tcrregex as td; td.setup_blast.install_blast_to_externals(download_from = 'dropbox_osx')"
 ```
 
 ## Usage
