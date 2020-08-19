@@ -1,0 +1,5 @@
+tcrregex/db/alphabeta_db.tsv_files/__init__.py
+tcrregex/db/alphabeta_db.tsv_files/probs_files_human_A/*txt
+tcrregex/db/alphabeta_db.tsv_files/probs_files_human_B/*txt
+tcrregex/db/alphabeta_db.tsv_files/probs_files_mouse_A/*txt
+tcrregex/db/alphabeta_db.tsv_files/probs_files_mouse_B/*txt
