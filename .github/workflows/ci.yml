@@ -26,7 +26,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         pip install pytest-cov
-        pip install coveralls
     - name: Test with pytest and coverage
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
@@ -34,4 +33,4 @@ jobs:
         python -c "import tcrregex as td; td.setup_db.install_all_next_gen()"
         python -c "import tcrregex as td; td.install_test_files.install_test_files()"
         pytest --cov=tcrregex/
-        coveralls
+
