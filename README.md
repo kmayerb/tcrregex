@@ -1,6 +1,6 @@
 # tcrregex
 
-![](15-Table1-1.png){:width="25%"}
+<img src="15-Table1-1.png" width="400" height="400">
 
 ## Install 
 
